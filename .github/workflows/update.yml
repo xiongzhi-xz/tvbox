@@ -1,0 +1,111 @@
+name: Update TVBox config
+
+on:
+  schedule:
+    # 每 6 小时一次（UTC）：00:00 / 06:00 / 12:00 / 18:00
+    - cron: "0 */6 * * *"
+  # 允许在 Actions 页面手动点 Run workflow
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 同一时间只跑一个，新的顶掉排队中的旧的
+concurrency:
+  group: update-config
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ---- 1. 拉上游最新配置 ----
+      - name: Fetch upstream
+        id: fetch
+        run: |
+          set -euo pipefail
+          GH=https://raw.githubusercontent.com
+          SRC=$GH/hubeizgd1979/tvbox-merge/main/config_all.json
+          if curl -sSf --max-time 90 -o config.new.json "$SRC"; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+            echo "上游规模: $(python3 count_cms.py config.new.json)"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "上游拉取失败，保留现有配置"
+          fi
+
+      # ---- 2. 探测并剔除失效采集站 ----
+      - name: Probe sources
+        if: steps.fetch.outputs.ok == 'true'
+        run: |
+          set -euo pipefail
+          python3 filter_sources.py \
+            --file config.new.json \
+            --out config.candidate.json \
+            --timeout 8 --workers 16 --jitter 0.5
+
+      # ---- 3. 安全阀：存活太少就不提交，防止把配置删空 ----
+      - name: Guard
+        id: guard
+        if: steps.fetch.outputs.ok == 'true'
+        run: |
+          set -euo pipefail
+          n=$(python3 count_cms.py config.candidate.json --number)
+          echo "存活 CMS 源: $n"
+          if [ "$n" -lt 10 ]; then
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::存活只有 $n 个，低于阈值 10，放弃本次更新"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ---- 4. 应用 + 生成纯 CMS 版 ----
+      - name: Apply
+        if: steps.guard.outputs.ok == 'true'
+        run: |
+          set -euo pipefail
+          mv config.candidate.json config.json
+          python3 build_alive.py config.json alive_cms.json
+
+      # ---- 5. 有变化才提交 ----
+      - name: Commit
+        id: commit
+        if: steps.guard.outputs.ok == 'true'
+        run: |
+          set -euo pipefail
+          rm -f config.new.json config.candidate.json
+          BOT=41898282+github-actions[bot]
+          git config user.name "github-actions[bot]"
+          git config user.email "$BOT@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "内容无变化，跳过提交"
+          else
+            TS=$(date -u +%Y-%m-%dT%H:%MZ)
+            git commit -m "auto: refresh sources ($TS)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ---- 6. 刷 jsDelivr 缓存，否则投影仪几小时内还是旧版 ----
+      - name: Purge jsDelivr cache
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          set -uo pipefail
+          BASE=https://purge.jsdelivr.net/gh/xiongzhi-xz/tvbox@main
+          for f in config.json alive_cms.json; do
+            echo "purge $f"
+            curl -s --max-time 30 "$BASE/$f" || true
+            echo
+          done
