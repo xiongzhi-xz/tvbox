@@ -4833,7 +4833,7 @@
     },
     {
       "key": "Doubanaaaa",
-      "name": "🐮【更新日期:20261123】🐮",
+      "name": "🐮【更新日期:20261124】🐮",
       "type": 3,
       "api": "csp_NewDouBanGuard",
       "indexs": 1,
@@ -4910,19 +4910,6 @@
       "timeout": 120
     },
     {
-      "key": "AppV7 | 咸鱼",
-      "name": "💥咸鱼┃秒播💥",
-      "type": 3,
-      "api": "csp_WexAppV7Guard",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "config": "AppV7Xy",
-        "proxyImg": false
-      },
-      "timeout": 120
-    },
-    {
       "key": "AppV7 | 追剧达人",
       "name": "💥追剧┃秒播💥",
       "type": 3,
@@ -4949,19 +4936,6 @@
       "timeout": 120
     },
     {
-      "key": "AppV7 | 小柠檬",
-      "name": "💥柠檬┃秒播💥",
-      "type": 3,
-      "api": "csp_WexAppV7Guard",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "config": "AppV7Xnm",
-        "proxyImg": false
-      },
-      "timeout": 120
-    },
-    {
       "key": "AppV7 | 蒙太奇",
       "name": "💥太奇┃秒播💥",
       "type": 3,
@@ -4970,32 +4944,6 @@
       "changeable": 0,
       "ext": {
         "config": "AppV7Mtq",
-        "proxyImg": false
-      },
-      "timeout": 120
-    },
-    {
-      "key": "AppV7 | 零零七影视",
-      "name": "💥零七┃秒播💥",
-      "type": 3,
-      "api": "csp_WexAppV7Guard",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "config": "AppV7Llq",
-        "proxyImg": false
-      },
-      "timeout": 120
-    },
-    {
-      "key": "AppV7 | 小柿子",
-      "name": "💥柿子┃秒播💥",
-      "type": 3,
-      "api": "csp_WexAppV7Guard",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "config": "AppV7Xsz",
         "proxyImg": false
       },
       "timeout": 120
@@ -8181,9 +8129,9 @@
       "group": "🕘️更新时间",
       "channels": [
         {
-          "name": "2026-11-23 16:58:49",
+          "name": "2026-11-24 03:34:55",
           "urls": [
-            "http://38.75.136.137:98/gslb/dsdqbv/cctv11hd.m3u8?auth=test20251009"
+            "http://38.75.136.137:98/gslb/dsdqbv/cctv6hd.m3u8?auth=test20251009"
           ]
         }
       ]
