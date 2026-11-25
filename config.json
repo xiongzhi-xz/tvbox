@@ -4670,13 +4670,6 @@
       "ext": "https://dm84.net"
     },
     {
-      "key": "方舟",
-      "name": "🐷┃方舟┃动漫",
-      "type": 3,
-      "api": "csp_AppGet",
-      "ext": "https://www.cyfz.top|e72cdfd629e8895d"
-    },
-    {
       "key": "csp_FirstAid",
       "name": "🚑┃急救┃教学",
       "type": 3,
@@ -6456,6 +6449,14 @@
       "quickSearch": 1
     },
     {
+      "key": "光速资源",
+      "name": "光速资源(切)",
+      "type": 1,
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
+      "searchable": 1,
+      "quickSearch": 1
+    },
+    {
       "key": "新浪资源",
       "name": "新浪资源(切)",
       "type": 1,
@@ -6852,6 +6853,26 @@
       "name": "🎥┃红牛┃资源",
       "type": 1,
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
+      "searchable": 1,
+      "filterable": 0,
+      "categories": [
+        "欧美剧",
+        "韩剧",
+        "日剧",
+        "动作片",
+        "喜剧片",
+        "爱情片",
+        "科幻片",
+        "恐怖片",
+        "剧情片",
+        "战争片"
+      ]
+    },
+    {
+      "key": "gszy",
+      "name": "🎥┃光速┃资源",
+      "type": 1,
+      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
       "searchable": 1,
       "filterable": 0,
       "categories": [
@@ -7855,11 +7876,6 @@
       }
     },
     {
-      "name": "m3u8",
-      "type": 0,
-      "url": "https://jx.m3u8.tv/jiexi/?url="
-    },
-    {
       "name": "看看",
       "type": 0,
       "url": "https://jx.m3u8.pw/?url="
@@ -8035,12 +8051,6 @@
       "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
-      "name": "Kimentanm",
-      "type": 0,
-      "url": "https://ghproxy.net/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "playerType": 2
-    },
-    {
       "name": "虎牙一起看",
       "type": 0,
       "url": "https://sub.ottiptv.cc/huyayqk.m3u",
@@ -8086,9 +8096,9 @@
       "group": "🕘️更新时间",
       "channels": [
         {
-          "name": "2026-11-24 16:40:11",
+          "name": "2026-11-25 01:43:49",
           "urls": [
-            "https://0472.org/hls/cgtnd.m3u8"
+            "http://38.75.136.137:98/gslb/dsdqbv/cctv12hd.m3u8?auth=test20251009"
           ]
         }
       ]
