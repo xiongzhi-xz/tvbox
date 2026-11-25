@@ -6456,14 +6456,6 @@
       "quickSearch": 1
     },
     {
-      "key": "光速资源",
-      "name": "光速资源(切)",
-      "type": 1,
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
-      "searchable": 1,
-      "quickSearch": 1
-    },
-    {
       "key": "新浪资源",
       "name": "新浪资源(切)",
       "type": 1,
@@ -6485,16 +6477,6 @@
         "token": "06caee3952a4c97d1ad4c766c875a99d3fa83aa68f46188823600d59ebba4469",
         "ua": "okhttp/3.10.0"
       }
-    },
-    {
-      "key": "还行",
-      "name": "还行",
-      "jar": "https://xiuxiu-pro.meitudata.com/posters/5199d8f8bcbe3c6d6938ded33cb90596.png",
-      "type": 3,
-      "api": "csp_AppYs",
-      "searchable": 1,
-      "quickSearch": 1,
-      "ext": "http://m51.gotto.top/api.php/v1.vod"
     },
     {
       "key": "超全",
@@ -6870,26 +6852,6 @@
       "name": "🎥┃红牛┃资源",
       "type": 1,
       "api": "https://www.hongniuzy2.com/api.php/provide/vod/",
-      "searchable": 1,
-      "filterable": 0,
-      "categories": [
-        "欧美剧",
-        "韩剧",
-        "日剧",
-        "动作片",
-        "喜剧片",
-        "爱情片",
-        "科幻片",
-        "恐怖片",
-        "剧情片",
-        "战争片"
-      ]
-    },
-    {
-      "key": "gszy",
-      "name": "🎥┃光速┃资源",
-      "type": 1,
-      "api": "https://api.guangsuapi.com/api.php/provide/vod/",
       "searchable": 1,
       "filterable": 0,
       "categories": [
@@ -8022,11 +7984,6 @@
       ]
     },
     {
-      "name": "jx",
-      "type": 0,
-      "url": "https://jx.m3u8.tv/jx/jx.php?url="
-    },
-    {
       "name": "无尽",
       "type": 0,
       "url": "https://jx.wujinkk.com/dplayer/?url=",
@@ -8129,9 +8086,9 @@
       "group": "🕘️更新时间",
       "channels": [
         {
-          "name": "2026-11-24 03:34:55",
+          "name": "2026-11-24 16:40:11",
           "urls": [
-            "http://38.75.136.137:98/gslb/dsdqbv/cctv6hd.m3u8?auth=test20251009"
+            "https://0472.org/hls/cgtnd.m3u8"
           ]
         }
       ]
