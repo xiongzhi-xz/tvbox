@@ -1376,37 +1376,6 @@
       "jar": "http://xhztv.top/xhz/Yoursmile.jar"
     },
     {
-      "key": "tv_pref-007_农民",
-      "name": "🥝农民·小盒子",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "http://xhztv.top/xhz/sub/农民影视.json",
-      "jar": "http://xhztv.top/xhz/Yoursmile.jar",
-      "playerType": "2",
-      "changeable": 1
-    },
-    {
-      "key": "tv_back-026_feifan",
-      "name": "🍀┃非凡┃资源·1号VIP源",
-      "type": 1,
-      "api": "http://ffzy5.tv/api.php/provide/vod",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "categories": [
-        "韩国剧",
-        "欧美剧",
-        "台湾剧",
-        "战争片",
-        "国产剧",
-        "大陆综艺"
-      ],
-      "hide": 1
-    },
-    {
       "key": "tv_back-023_csp_非凡资源",
       "name": "🥗┃非凡┃资源·ok线路1",
       "type": 1,
@@ -1442,6 +1411,24 @@
         "日韩综艺",
         "欧美综艺"
       ]
+    },
+    {
+      "key": "tv_back-012_feifan",
+      "name": "🍀┃非凡┃资源·二月红接口",
+      "type": 1,
+      "api": "http://ffzy5.tv/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "categories": [
+        "韩国剧",
+        "欧美剧",
+        "台湾剧",
+        "战争片",
+        "国产剧",
+        "大陆综艺"
+      ],
+      "hide": 1
     },
     {
       "key": "tv_back-023_taopian",
@@ -1807,53 +1794,6 @@
       },
       "timeout": 60,
       "jar": "https://qist.wyfc.qzz.io/xiaosa/spider.jar"
-    },
-    {
-      "key": "tv_back-017_卡卡",
-      "name": "卡卡 • 4K·潇洒",
-      "type": 3,
-      "api": "csp_KKPan",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 0,
-      "style": {
-        "type": "list"
-      },
-      "timeout": 60,
-      "jar": "https://qist.wyfc.qzz.io/xiaosa/spider.jar"
-    },
-    {
-      "key": "tv_back-023_暴风采集",
-      "name": "🌪️暴风影音·ok线路1",
-      "type": 1,
-      "api": "https://app.bfzyapi.com/api.php/provide/vod/",
-      "playUrl": "",
-      "categories": [
-        "国产剧",
-        "国产动漫",
-        "动作片",
-        "科幻片",
-        "剧情片",
-        "喜剧片",
-        "爱情片",
-        "恐怖片",
-        "战争片",
-        "香港剧",
-        "台湾剧",
-        "日本剧",
-        "欧美剧",
-        "泰国剧",
-        "日本动漫",
-        "综艺频道",
-        "大陆综艺",
-        "港台综艺",
-        "日本综艺",
-        "新马泰综艺",
-        "纪录片"
-      ],
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
     },
     {
       "key": "drpy_js_虎牙直播",
@@ -5358,17 +5298,6 @@
       "changeable": 1
     },
     {
-      "key": "zxzj",
-      "name": "🍊┃在线┃外剧",
-      "type": 3,
-      "api": "csp_Zxzj",
-      "timeout": 15,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": "https://www.zxzjhd.com/"
-    },
-    {
       "key": "低端",
       "name": "⏮️┃低端┃外剧",
       "type": 3,
@@ -7711,6 +7640,42 @@
       }
     },
     {
+      "name": "freejson",
+      "type": 0,
+      "url": "https://h5.freejson.xyz/player/?url="
+    },
+    {
+      "name": "夜幕",
+      "type": 0,
+      "url": "https://www.yemu.xyz/?url=",
+      "ext": {
+        "flag": [
+          "qq",
+          "腾讯",
+          "qiyi",
+          "iqiyi",
+          "爱奇艺",
+          "奇艺",
+          "youku",
+          "优酷",
+          "mgtv",
+          "芒果",
+          "letv",
+          "乐视",
+          "pptv",
+          "PPTV",
+          "sohu",
+          "bilibili",
+          "哔哩哔哩",
+          "哔哩"
+        ]
+      }
+    },
+    {
+      "name": "8090",
+      "url": "https://www.8090g.cn/?url="
+    },
+    {
       "name": "789",
       "type": 0,
       "url": "https://m.789bh.com/?url=",
@@ -7947,11 +7912,6 @@
       }
     },
     {
-      "name": "yemu",
-      "type": 0,
-      "url": "https://www.yemu.xyz/?url="
-    },
-    {
       "name": "ikun",
       "type": 0,
       "url": "https://jx.hls.one/?url="
@@ -8044,9 +8004,9 @@
       "group": "🕘️更新时间",
       "channels": [
         {
-          "name": "2026-11-26 15:57:53",
+          "name": "2026-11-27 01:15:12",
           "urls": [
-            "http://104.152.209.49:8181/720p/cctv5.m3u8"
+            "https://0472.org/hls/cgtn.m3u8"
           ]
         }
       ]
