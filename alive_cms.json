@@ -20,18 +20,18 @@
     },
     {
       "key": "cms_3",
-      "name": "🥗┃非凡┃资源·ok线路1",
+      "name": "🍀┃非凡┃资源·1号VIP源",
       "type": 1,
-      "api": "http://ffzy1.tv/api.php/provide/vod/",
+      "api": "http://ffzy5.tv/api.php/provide/vod",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
     },
     {
       "key": "cms_4",
-      "name": "🍀┃非凡┃资源·二月红接口",
+      "name": "🥗┃非凡┃资源·ok线路1",
       "type": 1,
-      "api": "http://ffzy5.tv/api.php/provide/vod",
+      "api": "http://ffzy1.tv/api.php/provide/vod/",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
